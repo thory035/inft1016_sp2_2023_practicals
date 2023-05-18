@@ -54,14 +54,17 @@ def foo():
         return True
 ```
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://upload.wikimedia.org/wikipedia/commons/0/03/Kismet-IMG_6007-black.jpg">
-  <source media="(prefers-color-scheme: light)" srcset="https://upload.wikimedia.org/wikipedia/commons/0/03/Kismet-IMG_6007-black.jpg">
-</picture>
+![Example Image](https://upload.wikimedia.org/wikipedia/commons/0/03/Kismet-IMG_6007-black.jpg)
 
 | Number        | Colour        | Size          |
 | ------------- | ------------- | ------------- |
 | 1             | blue          | 8             |
+| 2             | green         | 12            |
+| 3             | red           | 14            |
+|
 
 
-
+```python
+def my_function():
+  print("Hello from a function")
+```
