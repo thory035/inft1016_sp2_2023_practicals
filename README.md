@@ -14,7 +14,6 @@ This is another paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing el
 This is another paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
-
 # This is a large heading.
 
 *This text is italic*
@@ -55,16 +54,17 @@ def foo():
 ```
 
 ![Example Image](https://upload.wikimedia.org/wikipedia/commons/0/03/Kismet-IMG_6007-black.jpg)
+[Image](https://upload.wikimedia.org/wikipedia/commons/0/03/Kismet-IMG_6007-black.jpg)
 
 | Number        | Colour        | Size          |
 | ------------- | ------------- | ------------- |
 | 1             | blue          | 8             |
 | 2             | green         | 12            |
 | 3             | red           | 14            |
-|
 
 
-```python
+
+```
 def my_function():
-  print("Hello from a function")
+print("Hello from a function")
 ```
