@@ -53,3 +53,15 @@ def foo():
     if not bar:
         return True
 ```
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://upload.wikimedia.org/wikipedia/commons/0/03/Kismet-IMG_6007-black.jpg">
+  <source media="(prefers-color-scheme: light)" srcset="https://upload.wikimedia.org/wikipedia/commons/0/03/Kismet-IMG_6007-black.jpg">
+</picture>
+
+| Number        | Colour        | Size          |
+| ------------- | ------------- | ------------- |
+| 1             | blue          | 8             |
+
+
+
