@@ -7,3 +7,28 @@ Files and URLs containing HTML often have a .html or .htm filename extension.
 <p>Files and URLs containing HTML often have a .html or .htm filename extension.</p>
 
 <p>"HTML" (2008, December 3). In <i>Wikipedia, the free encyclopedia.</i> Retrieved December 3, 2008, from http://en.wikipedia.org/wiki/HTML</p>
+
+<h3>Grocery List Unordered</h3>
+<ul>
+<li>Oranges</li>
+<li>Apples</li>
+<li>Grapes</li>
+<li>Olives</li>
+<li>Cheese</li>
+</ul>
+
+<h3>Grocery List Oordered</h3>
+<ol>
+<li>Oranges</li>
+<li>Apples</li>
+<li>Grapes</li>
+<li>Olives</li>
+<li>Cheese</li>
+</ol>
+
+<h3>Grocery List Unordered</h3>
+<li>Oranges</li>
+<li>Apples</li>
+<li>Grapes</li>
+<li>Olives</li>
+<li>Cheese</li>
