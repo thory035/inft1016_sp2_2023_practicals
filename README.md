@@ -94,7 +94,7 @@ Files and URLs containing HTML often have a .html or .htm filename extension.
 <li>Cheese</li>
 </ol>
 
-<h3>Grocery List Oordered</h3>
+<h3>Grocery List Unordered</h3>
 <li>Oranges</li>
 <li>Apples</li>
 <li>Grapes</li>
