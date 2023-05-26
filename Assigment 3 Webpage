@@ -1,1 +1,17 @@
 # Assignment_3_WebPage
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            padding: 20px; /* Adds space around the edge of the page */
+        }
+        #heading {
+            margin-bottom: 20px;  /* Adds space below the heading */
+        }
+        #nameInput {
+            display: block;  /* Makes the input field take up the full width of its container, forcing the button onto a new line */
+            margin-bottom: 20px; /* Adds space below the input field */
+        }
+    </style>
+</head>
