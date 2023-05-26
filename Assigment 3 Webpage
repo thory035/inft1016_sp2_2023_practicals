@@ -15,3 +15,9 @@
         }
     </style>
 </head>
+<body style="background-color: white; color: black">
+    <h1 id="heading">Hello, </h1>
+    <input type="text" id="nameInput" oninput="document.getElementById('heading').innerText = 'Hello, ' + this.value;" placeholder="Enter your name">
+    <button onclick="document.body.style.backgroundColor = document.body.style.backgroundColor === 'white' ? 'black' : 'white'; document.body.style.color = document.body.style.color === 'black' ? 'white' : 'black';">Toggle Dark Mode</button>
+</body>
+</html>
