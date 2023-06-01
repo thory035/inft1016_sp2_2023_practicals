@@ -20,10 +20,12 @@
         color: rgb(131, 148, 150);
     }
 
-    article {
-        accent-color: rgb(211, 54, 130);
-
+    a:link {
+        color: rgb(211, 54, 130);
     }
 
+    a:hover {
+        color:rgb(203, 75, 22);
+    }
 </style>
 </html>
