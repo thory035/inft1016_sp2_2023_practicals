@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My page title</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            padding: 20px; /* Adds space around the edge of the page */
+            background-color: white;
+            color: black;
+        }
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Source Sans Pro to the whole body */
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+    </style>
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+<body>
+    <h2 id="heading">Hello, </h2>
+    <input type="text" id="nameInput" oninput="document.getElementById('heading').innerText = 'Hello, ' + this.value;" placeholder="Enter your name">
+    <button id="darkModeToggle">Toggle Dark Mode</button>
+    <h3 id="datetime"></h3>
+
+    <script>
+        // Function to toggle dark mode
+        function toggleDarkMode() {
+            var body = document.body;
+            if (body.classList.contains('dark-mode')) {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Function to set the theme based on the value saved in local storage
+        function setThemeFromLocalStorage() {
+            var theme = localStorage.getItem('theme');
+            if (theme === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+        }
+
+        // Run the function when the page loads
+        setThemeFromLocalStorage();
+
+        // Add event listener for the dark mode toggle button
+        document.getElementById('darkModeToggle').addEventListener('click', toggleDarkMode);
+
+        // Update the time
+        document.getElementById('datetime').innerText = new Date().toLocaleString();
+    </script>
+</body>
+</html>
