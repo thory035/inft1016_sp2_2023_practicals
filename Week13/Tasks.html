@@ -1,13 +1,16 @@
+<!-- Write your comments here -->
 <html>
 <head>
     <title>Week 13</title>
 
     <script>
+        // Tracks the number of clicks
         counter = 0;
-
+        // Updates click count and displays it
         function countClicks(element) {
     counter = counter + 1;
     var output = 'The link was pressed ' + counter + ' times.';
+    // Updates content of the specified element with output message
     element.innerHTML = output;
 }
     </script>
@@ -15,6 +18,7 @@
 </head>
 <body>
     <h1>JavaScript Demo</h1>
+    <!-- Click event calls the countClicks function with click event calling the countClicks function -->
     <a href="#" onclick="countClicks(this);">Click me</a>
     <p id="boxy"></p>
 </body>
