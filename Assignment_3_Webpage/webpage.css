@@ -7,7 +7,7 @@ h1, h2, p {
   h1 {
     text-align: center;
     font: 1em/1.33 'Roboto', sans-serif;
-    font-size: 200%; /* Increase the font size */
+    font-size: 30px;
   }
   
   nav {
@@ -40,6 +40,7 @@ h1, h2, p {
   
   body {
     font-family: 'Roboto', sans-serif;
+
   }
   
   body {
