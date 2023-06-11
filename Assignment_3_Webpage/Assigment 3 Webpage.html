@@ -14,7 +14,10 @@
 </head>
 <body data-theme="light">
     <header>
-      <h1>TREES IN JAPAN</h1>
+      <h1 id="greeting">TREES IN JAPAN</h1>
+      <input type="text" id="name" placeholder="Enter your name">
+      <button type="button" onclick="updateHeading()" class="center-align">Submit</button>
+
     </header>
 
     <nav>
@@ -51,7 +54,6 @@
 
         <p>Vivamus fermentum semper porta. Nunc diam velit, adipscing ut tristique vitae sagittis vel odio. Maecenas convallis ullamcorper ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, is fringille sem nunc vet mi.</p>
       </article>
-
       <aside>
         <h2>Related</h2>
         <ul>
@@ -64,6 +66,24 @@
       function showImage(imageUrl) {
         document.getElementById('image').src = imageUrl;
       }
+
+      function updateHeading() {
+        var name = document.getElementById('name').value;
+        document.getElementById('greeting').innerText = "Hello, " + name;
+      }
+
+      window.onload = function() {
+        var urlParams = new URLSearchParams(window.location.search);
+        var name = urlParams.get('name');
+        if (name) {
+          document.getElementById('name').value = name;
+          updateHeading();
+        }
+      }
     </script>
+
+    <footer>
+      <p>© 2050 by nobody. All rights reversed.</p>
+    </footer>
 </body>
 </html>
