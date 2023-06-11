@@ -98,7 +98,7 @@ h1, h2, p {
     text-align: center;
   }
   
-  /* Center align user input */
+  /* Center align user input (didn't really work though) */
   .center-align {
     text-align: center;
   }
