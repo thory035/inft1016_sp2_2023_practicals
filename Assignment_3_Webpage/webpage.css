@@ -56,6 +56,10 @@
         color: rgb(0, 0, 0);
       }
 
+      footer {
+        text-align: center;
+      }
+
       a:link {
         color: rgba(167, 124, 81, 0.925);
       }
@@ -66,25 +70,25 @@
 
       /* Light Colors*/
       .theme-light {
-        --background: #fff;
+        --bg-color: #fff;
         --color: #000;
       }
 
       /* Dark Colors */
       .theme-dark {
-        --background: #000;
+        --bg-color: #000;
         --color: #fff;
       }
 
       html,
       body {
-        background: var(--background);
-        color: var(--color);
+        background-color: var(--bg-color);
+        color: var(--font-color);
       }
 
       /* Invert text color for dark theme */
       .theme-dark h1, .theme-dark h2, .theme-dark p {
-        color: var(--color);
+        color: var(--font-color);
       }
 
       /* Margin for buttons and image */
@@ -98,10 +102,15 @@
         margin: 20px auto;
       }
 
+      /* Center the text under image */
       #image-license {
-      text-align: center;
+        text-align: center;
       }
 
+      /* Center align user input */
+      .center-align {
+        text-align: center;
+      }
 
     </style>
   </head>
@@ -112,46 +121,4 @@
 
     <nav>
       <ul>
-        <li><button type="button" onclick="showImage('https://live.staticflickr.com/5505/10517564194_c98c355387_b.jpg')">Japanese Garden Trees</button></li>
-        <li><button type="button" onclick="showImage('https://live.staticflickr.com/600/1155226271_39aa31cf4d_b.jpg')">Ceiba Tree</button></li>
-        <li><button type="button" onclick="showImage('https://live.staticflickr.com/2426/3795866926_834c167b24_b.jpg');">Ancient Olive Trees</button></li>
-        <li><button type="button" onclick="showImage('https://live.staticflickr.com/3118/2431912955_f1efb765aa_b.jpg');">Palm tree</button></li>
-        <li><button type="button" onclick="showImage('https://live.staticflickr.com/7099/6968551938_8960080fd9_b.jpg');">Mangroves</button></li>
-      </ul>
-    </nav>
-
-    <img id="image" src="" style="display: none;">
-
-    <main>
-      <article>
-        <h2>Article heading</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>
-
-        <h3>Subsection</h3>
-
-        <p>Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.</p>
-
-        <p>Pelientesque auctor nisi id magna consequat sagittis. Curabitur dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.</p>
-
-        <h3>Another subsection</h3>
-
-        <p>Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque penatibus et manis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
-
-        <p>Vivamus fermentum semper porta. Nunc diam velit, adipscing ut tristique vitae sagittis vel odio. Maecenas convallis ullamcorper ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, is fringille sem nunc vet mi.</p>
-      </article>
-
-      <aside>
-        <h2>Related</h2>
-        <ul>
-          <li><a href="#">Oh I do like to be beside the
-      </ul>
-    </aside>
-
-    <script>
-      function showImage(imageUrl) {
-        document.getElementById('image').src = imageUrl;
-        document.getElementById('image').style.display = 'block';
-      }
-    </script>
-</body>
-</html>
+        <li><button type="button" onclick="showImage('https://live.static

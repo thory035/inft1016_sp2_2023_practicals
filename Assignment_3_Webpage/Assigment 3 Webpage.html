@@ -63,6 +63,14 @@
     </main>
 
     <script>
+    
+      function toggleTheme() {
+        var body = document.querySelector('body');
+        var currentTheme = body.getAttribute('data-theme');
+        var newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        body.setAttribute('data-theme', newTheme);
+      }
+
       function showImage(imageUrl) {
         document.getElementById('image').src = imageUrl;
       }
@@ -79,6 +87,10 @@
           document.getElementById('name').value = name;
           updateHeading();
         }
+        var currentDate = new Date().toLocaleString();
+        var dateElement = document.getElementById('current-date');
+        dateElement.innerText = currentDate;
+
       }
     </script>
 
