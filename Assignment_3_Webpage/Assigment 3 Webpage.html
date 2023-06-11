@@ -74,12 +74,12 @@
     </main>
 
     <script>
-
+        // Updates the heading with a personalized greeting.
         function updateHeading() {
         var name = document.getElementById('name').value;
         document.getElementById('greeting').innerText = "Hello, " + name;
       }
-
+      // Changes the image source to the specified URL
         function showImage(imageUrl) {
         document.getElementById('image').src = imageUrl;
       }
@@ -115,20 +115,19 @@
           // Initialize the theme based on the stored preference
           initializeTheme();
   
-          // Rest of your window.onload code...
-  
+          // retrieves and sets the value of a name parameter.
           var urlParams = new URLSearchParams(window.location.search);
           var name = urlParams.get('name');
           if (name) {
             document.getElementById('name').value = name;
             updateHeading();
           }
-
+          // Displays an image by setting its source and making it visible.
           function showImage(imageUrl) {
             document.getElementById('image').src = imageUrl;
             document.getElementById('image').style.display = 'block';
         }
-  
+          // displays the current date and time appended to the body of the document
           var currentDate = new Date().toLocaleString();
           var dateElement = document.createElement('p');
           dateElement.innerText = 'Current Date and Time: ' + currentDate;
@@ -142,7 +141,7 @@
     <footer>
       <p>© 2050 by nobody. All rights reversed.</p>
     </footer>
-
+     <!--creates a toggle button to switch themes-->
     <div class="toggle-button">
       <button type="button" onclick="toggleTheme()">Toggle Theme</button>
     </div>
