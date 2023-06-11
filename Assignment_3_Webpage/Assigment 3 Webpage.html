@@ -9,7 +9,30 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
     <style>
-   
+      /* Light Theme */
+      body[data-theme="light"] {
+        background-color: #ffffff;
+        color: #000000;
+      }
+      
+      /* Dark Theme */
+      body[data-theme="dark"] {
+        background-color: #222222;
+        color: #ffffff;
+      }
+    
+      .toggle-button {
+        text-align: center;
+        margin: 20px 0;
+      }
+      
+      .toggle-button button {
+        padding: 10px 20px;
+        background-color: #dddddd;
+        border: none;
+        color: #000000;
+        cursor: pointer;
+      }
     </style>
 </head>
 <body data-theme="light">
@@ -17,7 +40,6 @@
       <h1 id="greeting">TREES IN JAPAN</h1>
       <input type="text" id="name" placeholder="Enter your name">
       <button type="button" onclick="updateHeading()" class="center-align">Submit</button>
-
     </header>
 
     <nav>
@@ -63,39 +85,62 @@
     </main>
 
     <script>
-    
-      function toggleTheme() {
-        var body = document.querySelector('body');
-        var currentTheme = body.getAttribute('data-theme');
-        var newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        body.setAttribute('data-theme', newTheme);
-      }
-
-      function showImage(imageUrl) {
-        document.getElementById('image').src = imageUrl;
-      }
-
-      function updateHeading() {
-        var name = document.getElementById('name').value;
-        document.getElementById('greeting').innerText = "Hello, " + name;
-      }
-
-      window.onload = function() {
-        var urlParams = new URLSearchParams(window.location.search);
-        var name = urlParams.get('name');
-        if (name) {
-          document.getElementById('name').value = name;
-          updateHeading();
+        // Function to set the theme preference in local storage
+        function setThemePreference(theme) {
+          localStorage.setItem('themePreference', theme);
         }
-        var currentDate = new Date().toLocaleString();
-        var dateElement = document.getElementById('current-date');
-        dateElement.innerText = currentDate;
-
-      }
-    </script>
+  
+        // Function to retrieve the theme preference from local storage
+        function getThemePreference() {
+          return localStorage.getItem('themePreference');
+        }
+  
+        // Function to toggle the theme
+        function toggleTheme() {
+          var body = document.querySelector('body');
+          var currentTheme = body.getAttribute('data-theme');
+          var newTheme = currentTheme === 'light' ? 'dark' : 'light';
+          body.setAttribute('data-theme', newTheme);
+          setThemePreference(newTheme);
+        }
+  
+        // Function to initialize the theme based on the stored preference
+        function initializeTheme() {
+          var body = document.querySelector('body');
+          var storedTheme = getThemePreference();
+          if (storedTheme) {
+            body.setAttribute('data-theme', storedTheme);
+          }
+        }
+  
+        window.onload = function() {
+          // Initialize the theme based on the stored preference
+          initializeTheme();
+  
+          // Rest of your window.onload code...
+  
+          var urlParams = new URLSearchParams(window.location.search);
+          var name = urlParams.get('name');
+          if (name) {
+            document.getElementById('name').value = name;
+            updateHeading();
+          }
+  
+          var currentDate = new Date().toLocaleString();
+          var dateElement = document.createElement('p');
+          dateElement.innerText = 'Current Date and Time: ' + currentDate;
+          document.body.appendChild(dateElement);
+        }
+      </script>
+  </body>
+  </html>
 
     <footer>
       <p>© 2050 by nobody. All rights reversed.</p>
     </footer>
+
+    <div class="toggle-button">
+      <button type="button" onclick="toggleTheme()">Toggle Theme</button>
+    </div>
 </body>
 </html>
