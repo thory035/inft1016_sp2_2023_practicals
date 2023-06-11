@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>My page title</title>
+    <title>Trees in Japan</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto:400,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="webpage.css">
     <!--[if lt IE 9]>
@@ -14,22 +14,23 @@
 </head>
 <body data-theme="light">
     <header>
-      <h1>Best Trees in Japan</h1>
+      <h1>TREES IN JAPAN</h1>
     </header>
 
     <nav>
       <ul>
-        <li><button type="button" onclick="showImage('https://live.staticflickr.com/5505/10517564194_c98c355387_b.jpg')">Japanese Garden Trees</button></li>
-        <li><button type="button" onclick="showImage('https://live.staticflickr.com/600/1155226271_39aa31cf4d_b.jpg')">Ceiba Tree</button></li>
-        <li><button type="button" onclick="showImage('https://live.staticflickr.com/2426/3795866926_834c167b24_b.jpg');">Ancient Olive Trees</button></li>
-        <li><button type="button" onclick="showImage('https://live.staticflickr.com/3118/2431912955_f1efb765aa_b.jpg');">Palm tree</button></li>
-        <li><button type="button" onclick="showImage('https://live.staticflickr.com/7099/6968551938_8960080fd9_b.jpg');">Mangroves</button></li>
+        <li><button type="button" onclick="showImage('https://live.staticflickr.com/5505/10517564194_c98c355387_b.jpg', 'Famous Japanese Garden Tree in Portland by Michael Matti<br>License: CC BY-NC 2.0<br>To view a copy of this license, visit <a href=https://creativecommons.org/licenses/by-nc/2.0/?ref=openverse>https://creativecommons.org/licenses/by-nc/2.0/?ref=openverse</a>')">Japanese Garden Trees</button></li>
+        <li><button type="button" onclick="showImage('https://live.staticflickr.com/600/1155226271_39aa31cf4d_b.jpg', 'Ceiba Tree<br>License: CC BY 2.0<br>To view a copy of this license, visit <a href=https://creativecommons.org/licenses/by/2.0/?ref=openverse>https://creativecommons.org/licenses/by/2.0/?ref=openverse</a>')">Ceiba Tree</button></li>
+        <li><button type="button" onclick="showImage('https://live.staticflickr.com/2426/3795866926_834c167b24_b.jpg', 'Corfu - Sept 2005 - Ancient Olive Trees<br>License: CC BY 2.0<br>To view a copy of this license, visit <a href=https://creativecommons.org/licenses/by/2.0/?ref=openverse>https://creativecommons.org/licenses/by/2.0/?ref=openverse</a>')">Ancient Olive Trees</button></li>
+        <li><button type="button" onclick="showImage('https://live.staticflickr.com/3118/2431912955_f1efb765aa_b.jpg', 'Palm tree<br>License: CC BY-SA 2.0<br>To view a copy of this license, visit <a href=https://creativecommons.org/licenses/by-sa/2.0/?ref=openverse>https://creativecommons.org/licenses/by-sa/2.0/?ref=openverse</a>')">Palm tree</button></li>
+        <li><button type="button" onclick="showImage('https://live.staticflickr.com/7099/6968551938_8960080fd9_b.jpg', 'Mangrove<br>License: CC BY 2.0<br>To view a copy of this license, visit <a href=https://creativecommons.org/licenses/by/2.0/?ref=openverse>https://creativecommons.org/licenses/by/2.0/?ref=openverse</a>')">Mangroves</button></li>
       </ul>
-
-
     </nav>
 
-    <img id="image" src="" style="display: none;">
+    <div id="image-container">
+      <img id="image" src="https://live.staticflickr.com/5505/10517564194_c98c355387_b.jpg" style="display: block;">
+      <p id="image-license">Famous Japanese Garden Tree in Portland by Michael Matti<br>License: CC BY-NC 2.0<br>To view a copy of this license, visit <a href="https://creativecommons.org/licenses/by-nc/2.0/?ref=openverse">https://creativecommons.org/licenses/by-nc/2.0/?ref=openverse</a></p>
+    </div>
 
     <main>
       <article>
@@ -52,15 +53,16 @@
       <aside>
         <h2>Related</h2>
         <ul>
-          <li><a href="#">Oh I do like to be beside the
-      </ul>
-    </aside>
+          <li><a href="#">Oh I do like to be beside the seaside</a></li>
+        </ul>
+      </aside>
 
-    <script>
-      function showImage(imageUrl) {
-        document.getElementById('image').src = imageUrl;
-        document.getElementById('image').style.display = 'block';
-      }
-    </script>
+      <script>
+        function showImage(imageUrl, licenseText) {
+          document.getElementById('image').src = imageUrl;
+          document.getElementById('image-license').innerHTML = licenseText;
+        }
+      </script>
+    </main>
 </body>
 </html>
